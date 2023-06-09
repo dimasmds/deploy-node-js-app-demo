@@ -13,6 +13,11 @@ async function start() {
 
   server.route([
     {
+      method: 'GET',
+      path: '/',
+      handler: () => ({ success: true, data: { message: 'Hello World!' } }),
+    },
+    {
       method: 'POST',
       path: '/contacts',
       handler: (request, h) => {
